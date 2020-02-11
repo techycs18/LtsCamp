@@ -32,7 +32,7 @@ a.navHead, a, .formHeads{
     font-family: 'Comfortaa', cursive;
 }
 article.container{
-    width: 88%;
+    width: 90%;
 }
 
 .thumbHover:hover {
@@ -54,7 +54,7 @@ p.subtext,h4.subtitle{
 }
 .jumbotron h1.head{
     font-family: 'Satisfy', cursive;
-    font-size: 70px;
+    font-size: 500%;
 }
 
 .alert{
@@ -64,7 +64,7 @@ p.subtext,h4.subtitle{
 }
 
 div.container{
-    width: 75%;
+    width: 84%;
 }
 
 .deleteForm{
@@ -75,6 +75,10 @@ div.container{
     padding: 0 5px;
     margin: 0%;
     outline: none;
+}
+
+.btn-group-lg>.btn, .btn-lg{
+    font-size: 100%;
 }
 
 .well{

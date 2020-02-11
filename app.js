@@ -71,4 +71,4 @@ app.get('*',(req,res) =>{
     res.send("<h1>INVALID REQUEST<h1>");
 });
 
-app.listen(3000,console.log("Yelp Camp Server has been started.."));
+app.listen(process.env.PORT || 3000,console.log("Yelp Camp Server has been started.."));

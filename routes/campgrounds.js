@@ -40,13 +40,12 @@ router.post('/',middleware.isLoggedIn,(req,res) =>{   //this post method is call
     var campName = req.body.formName;   //formName is the name given to i/p type in form to enter camp name
     var campImageUrl =  req.body.formUrl;   //formName is the name given to i/p type in form to enter Img url
     var campDescription = req.body.formDescription; 
-    var rice = req.body.formPrice;
+    var Price = req.body.formPrice;
     var author = {
         id: req.user._id,
         username: req.user.username
     }
     var newCampground = {nameMongo: campName ,price: Price ,imageMongo: campImageUrl,descriptionMongo: campDescription,authorMongo: author};
-w
     addToDB(newCampground);
     req.flash("success","Campground added");
     

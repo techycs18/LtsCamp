@@ -32,7 +32,7 @@ a.navHead, a, .formHeads{
     font-family: 'Comfortaa', cursive;
 }
 article.container{
-    width: 90%;
+    width: 85%;
 }
 
 .thumbHover:hover {
@@ -54,7 +54,7 @@ p.subtext,h4.subtitle{
 }
 .jumbotron h1.head{
     font-family: 'Satisfy', cursive;
-    font-size: 500%;
+    font-size: 5em;
 }
 
 .alert{

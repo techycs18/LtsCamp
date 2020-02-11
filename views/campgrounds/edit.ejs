@@ -1,0 +1,31 @@
+<%- include("../partials/header.ejs")%>
+    <div class = "container">
+        <div class = "row">
+            <h2 class="formHeads" style = "text-align: center">Edit Camp-Ground: <%=varCampGround.nameMongo %></h2><br>
+            <form action="/Campgrounds/<%=varCampGround._id%>?_method=PUT"  method="POST">
+                <div style = "margin: 0px 20%" class="content">
+                    <div class = "form-group">
+                        <input class = "form-control" type = "text" name = "campground[nameMongo]" required  value="<%=varCampGround.nameMongo %>">
+                    </div>
+                    <div class = "form-group input-group ">
+                        <span class="input-group-addon">Rs.</span>
+                        <input class="form-control" aria-label="Amount (to the nearest dollar)" type = "number"  name = "campground[price]" required placeholder = "Price " min="0.00" step="10"  value="<%=varCampGround.price %>">
+                        <span  class="input-group-addon">.00</span>
+                    </div>
+                    <div class = "form-group">
+                        <input class = "form-control" type = "text" name = "campground[imageMongo]" required value="<%=varCampGround.imageMongo %>" >
+                    </div>
+                     <div class = "form-group">
+                        <textarea class = "form-control" type = "text" name = "campground[descriptionMongo]" style="height: 150px; margin-bottom: 40px;" required >
+                            <%=varCampGround.descriptionMongo%>
+                        </textarea>
+                    </div>
+                 </div>
+                <div class = "form-group" style = "margin: 0 40%; width:20%">
+                    <button class  = "btn btn-lg btn-primary btn-block" type = "">Submit</button>
+                </div>
+            </form>
+            <p ><a href="/Campgrounds">Go Back</a></p>
+        </div>
+    </div>
+<%- include("../partials/footer.ejs")%>

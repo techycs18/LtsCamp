@@ -1,0 +1,22 @@
+<%- include("../partials/header.ejs")%>
+
+    <div class = "container">
+        <div class = "row">
+            <h2 class="formHeads" style = "text-align: center"> Edit Comment</h2><br>
+            <form action="/Campgrounds/<%=varCampID%>/comments/<%=comment._id%>/edit?_method=PUT"  method="POST">
+                <div class = "content" style = "margin: 0px 20%">
+                     <div class = "form-group">
+                        <label for="campComment"> Comments</label>
+                        <textarea style = "height: 150px" class = "form-control" type = "text" name = "comments[textMongo]" required 
+                        placeholder = "Camp name "><%=comment.textMongo%></textarea>
+                    </div>
+                 </div>
+                <div class = "form-group" style = "margin: 0 40%; width:20%">
+                    <button class  = "btn btn-lg btn-primary btn-block" type = "">Update</button>
+                </div>
+            </form>
+            <p ><a href="/Campgrounds">Go Back</a></p>
+        </div>
+    </div>
+
+<%- include("../partials/footer.ejs")%>

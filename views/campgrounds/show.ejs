@@ -1,0 +1,69 @@
+<%- include("../partials/header.ejs")%>
+
+<div class = "container">
+    <h1 class ="headContent" style = "text-align: center">Welcome to Campground</h1>
+    <div class = "row">
+        <div class = "col-md-3">
+            <p class = "lead headContent">LtsCamp</p>
+            <div class = "list-group content">
+                <li class = "list-group-item active">Info 1</li>
+                <li class = "list-group-item">Info 2</li>
+                <li class = "list-group-item">Info 2</li>
+            </div>
+            <a href="/Campgrounds" style="font-size: 16px; margin-top: 30px; margin-left: 10px;"> Go back</a>
+        </div>
+        <div class = "col-md-9">
+            <div class = "thumbnail">
+                <img class = "img-responsive" src="<%= varShowCampGround.imageMongo %>" >
+                <div class = "descriptionSection" style="margin-bottom: 20px;">
+                    <section>
+                        <h4 class = "pull-right content"><strong>Rs. <%= varShowCampGround.price %>/night</strong></h4>
+                        <h4 ><a href=""><%= varShowCampGround.nameMongo %></a></h4>
+                    </section>
+                    <article class="commentsSection content"><%= varShowCampGround.descriptionMongo %></p>
+                    <div class = "overLock">Submitted By :<strong> <%= varShowCampGround.authorMongo.username.toUpperCase()%></strong> <div style="float: right; display: inline;"><%= moment(varShowCampGround.createdTime).fromNow() %></div></div>
+                    <div>
+                        <% if (currentUser && varShowCampGround.authorMongo.id.equals(currentUser._id)) { %>
+                            <a class  = " btn btn-warning" style = "padding: 5px 20px; margin-top: 10px;" href="/Campgrounds/<%= varShowCampGround._id %>/edit"><strong>EDIT</strong></a>
+                            <form class="deleteForm" action="/Campgrounds/<%= varShowCampGround._id%>?_method=DELETE" method="POST">
+                                <button  style = "padding: 5px 10px; margin-top: 10px ; margin-left:10px" class="btn btn-danger">DELETE</button>
+                            </form>
+                        <% } %>
+                    </div>
+                </div>  
+            <div >
+                <div class = "text-right">
+                    <a class = "btn btn-success" href="/Campgrounds/<%=varShowCampGround._id%>/comments/new">Leave Comment</a>
+                </div><hr style="border-color: black;">
+                <article ><%varShowCampGround.commentsMongo.forEach(function(eachComment){%>
+                    <div class = "row ">
+                        <div class = "col-md-12 ">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <strong class = "overLock"><%= eachComment.authorMongo.username%></strong>
+                                    <span class = "pull-right overLock"><%= moment(eachComment.createdTime).fromNow() %></span>
+                                </div>
+                                <div class="panel-body">
+                                    <section class = "commentsSection content" ><%= eachComment.textMongo %></section>
+                                    <% if (currentUser && eachComment.authorMongo.id.equals(currentUser._id)) { %>
+                                        <div>
+                                            <a class = "btn btn-link btnCom" href="/Campgrounds/<%=varShowCampGround._id%>/comments/<%=eachComment._id%>/edit">
+                                                edit
+                                            </a>
+                                            <form class="deleteForm" action="/Campgrounds/<%=varShowCampGround._id%>/comments/<%=eachComment._id%>?_method=DELETE"  method="POST">
+                                               <input class = "btn btn-link btnCom" type="submit" name="del" id="delID" value="delete"> 
+                                            </form>
+                                        </div>
+                                    <% } %>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                <%})%></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs")%>
+

@@ -1,0 +1,112 @@
+body{
+    background-color:    #f4f6f6 ;
+}
+
+.btn, .btn::-moz-focus-inner, button::-moz-focus-inner, button, a, a::-moz-focus-inner {
+    border: 0;
+    outline: none;
+} 
+ 
+.jumbotron{
+    background-color:   #d6eaf8 ;
+}
+
+nav a {
+    color: white;
+}
+
+nav.navbar{
+    margin-bottom: 10px;
+}
+
+button, .btn{
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+}
+
+a.navHead:hover{
+    font-size: 1.1em;
+}
+
+a.navHead, a, .formHeads{
+    font-family: 'Comfortaa', cursive;
+}
+article.container{
+    width: 88%;
+}
+
+.thumbHover:hover {
+    opacity: 0.7;
+    background-color:  #d6eaf8;
+}
+
+p.subtext,h4.subtitle{
+    font-family: 'Ubuntu', sans-serif;
+}
+.headContent{
+    font-family: 'Merienda', cursive
+}
+.overLock{
+    font-family: 'Overlock', cursive;
+}
+.content{
+    font-family: 'Open Sans', sans-serif;
+}
+.jumbotron h1.head{
+    font-family: 'Satisfy', cursive;
+    font-size: 70px;
+}
+
+.alert{
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+div.container{
+    width: 75%;
+}
+
+.deleteForm{
+    display: inline;
+}
+
+.btn.btnCom{
+    padding: 0 5px;
+    margin: 0%;
+    outline: none;
+}
+
+.well{
+    padding: 12px;
+}
+
+a.btn-primary{
+    background-color: #2E86C1 ;
+}
+
+.thumbnail .caption{
+    padding: 3px 0;
+}
+.navbar-nav > ul li > a:hover.navHead{
+    background-color:  white ;
+    color: #1B4F72;
+}
+
+.thumbnail {
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.thumbnail img {
+    width: 100%;
+    border-radius: inherit;
+}
+.commentsSection{
+    padding: 0 10px;
+}
+
+.descriptionSection{
+    padding: 0% 10px;
+}

@@ -1,0 +1,31 @@
+<%- include("../partials/header.ejs")%>
+
+<div class="container"> 
+    <header class="jumbotron ">
+        <article class="container">
+            <i></i>
+            <h1 class="head"> <i class="fas fa-campground" style="color: #154360; padding-right: 20px;"></i>Welcome to LtsCamp !</h1>
+            <p class="subtext">One of the best Camp-Grounds to visit in India</p >
+            <p>
+                <a class="btn btn-primary btn-lg" href="/Campgrounds/new">New Campground</a>
+            </p>  
+        </article>
+    </header>
+    <div class = "row text-center" style="display:flex; flex-wrap: wrap; ">
+        <% varCampGround.forEach(function(eachCamp){%>
+            <div class = "col-md-3 col-sm-6 col-6">
+                <div class = "thumbnail thumbHover">
+                    <img class="thumbHover" src="<%= eachCamp.imageMongo%>" > 
+                    <p>
+                    <h4 class = "caption subtitle"><%= eachCamp.nameMongo %></h4>
+                        <a class = "btn btn-primary" href="/Campgrounds/<%= eachCamp._id%>">More Info </a>
+                    </p>
+                </div>   
+            </div>
+        <%});%>
+    </div>
+</div>
+
+<%- include("../partials/footer.ejs")%>
+
+

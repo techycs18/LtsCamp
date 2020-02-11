@@ -12,9 +12,8 @@ var     express         =   require('express'),  //get express module from node-
         indexRoutes             =   require('./routes/index'),    
         methodOverride          = require('method-override');
 
-// const   uri = 'mongodb://localhost/YelpCampDB'; //uri to connect with which DB of mongoDB on localhost
-const   uri = 'mongodb+srv://techycs:messi1018@ltscampdb-ifqwi.mongodb.net/test?retryWrites=true&w=majority'
-
+const   uri = process.env.DATABASEURL;
+// const   uri = process.env.MONGOLAB_DB;  //they are set in local enviroment using exxport MONGO_LAB = SOME_URL and then used here
 mongoose.connect(uri, {
     useUnifiedTopology: true,
     useNewUrlParser: true

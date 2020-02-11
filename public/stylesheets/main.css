@@ -18,12 +18,14 @@ nav a {
 nav.navbar{
     margin-bottom: 10px;
 }
-
 button, .btn{
     font-family: 'Raleway', sans-serif;
     outline: none;
 }
-
+article.panel{
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
 a.navHead:hover{
     font-size: 1.1em;
 }
@@ -54,7 +56,7 @@ p.subtext,h4.subtitle{
 }
 .jumbotron h1.head{
     font-family: 'Satisfy', cursive;
-    font-size: 5em;
+    font-size: 4.5em;
 }
 
 .alert{
@@ -71,8 +73,8 @@ div.container{
     display: inline;
 }
 
-.btn.btnCom{
-    padding: 0 5px;
+.btnCom{
+    padding: 3px 7px;
     margin: 0%;
     outline: none;
 }

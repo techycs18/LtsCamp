@@ -15,13 +15,15 @@
         <div class = "col-md-9">
             <div class = "thumbnail">
                 <img class = "img-responsive" src="<%= varShowCampGround.imageMongo %>" >
-                <div class = "descriptionSection" style="margin-bottom: 20px;">
-                    <section>
-                        <h4 class = "pull-right content"><strong>Rs. <%= varShowCampGround.price %>/night</strong></h4>
-                        <h4 ><a href=""><%= varShowCampGround.nameMongo %></a></h4>
-                    </section>
-                    <article class="commentsSection content"><%= varShowCampGround.descriptionMongo %></p>
-                    <div class = "overLock">Submitted By :<strong> <%= varShowCampGround.authorMongo.username.toUpperCase()%></strong> <div style="float: right; display: inline;"><%= moment(varShowCampGround.createdTime).fromNow() %></div></div>
+                <div class = "descriptionSection" style="margin-bottom: 8px;">
+                    <article class="panel panel-default">
+                        <section class="panel-heading">
+                            <section class = "pull-right content" style="font-size: 1.3em; padding-right:30px; padding-top: 3px;"><strong>Rs. <%= varShowCampGround.price %>/night</strong></section>
+                            <section style="font-size: 1.6em;"><a href=""><%= varShowCampGround.nameMongo %></a></section>
+                        </section>
+                    </article>
+                    <p class="commentsSection content"><%= varShowCampGround.descriptionMongo %></p>
+                    <div class = "overLock" style="margin-left: 12px;">Submitted By :<strong> <%= varShowCampGround.authorMongo.username.toUpperCase()%></strong> <div style="float: right; display: inline;"><%= moment(varShowCampGround.createdTime).fromNow() %></div></div>
                     <div>
                         <% if (currentUser && varShowCampGround.authorMongo.id.equals(currentUser._id)) { %>
                             <a class  = " btn btn-warning" style = "padding: 5px 20px; margin-top: 10px;" href="/Campgrounds/<%= varShowCampGround._id %>/edit"><strong>EDIT</strong></a>
@@ -46,12 +48,12 @@
                                 <div class="panel-body">
                                     <section class = "commentsSection content" ><%= eachComment.textMongo %></section>
                                     <% if (currentUser && eachComment.authorMongo.id.equals(currentUser._id)) { %>
-                                        <div>
-                                            <a class = "btn btn-link btnCom" href="/Campgrounds/<%=varShowCampGround._id%>/comments/<%=eachComment._id%>/edit">
+                                        <div style="padding-right: 15px; text-align: end;">
+                                            <a class = "btn btn-warning btnCom" href="/Campgrounds/<%=varShowCampGround._id%>/comments/<%=eachComment._id%>/edit">
                                                 edit
                                             </a>
                                             <form class="deleteForm" action="/Campgrounds/<%=varShowCampGround._id%>/comments/<%=eachComment._id%>?_method=DELETE"  method="POST">
-                                               <input class = "btn btn-link btnCom" type="submit" name="del" id="delID" value="delete"> 
+                                               <input class = "btn btn-danger btnCom" type="submit" name="del" id="delID" value="delete"> 
                                             </form>
                                         </div>
                                     <% } %>

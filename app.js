@@ -14,6 +14,7 @@ var     express         =   require('express'),  //get express module from node-
 
 // const   uri = 'mongodb://localhost/YelpCampDB'; //uri to connect with which DB of mongoDB on localhost
 const   uri = 'mongodb+srv://techycs:messi1018@ltscampdb-ifqwi.mongodb.net/test?retryWrites=true&w=majority'
+
 mongoose.connect(uri, {
     useUnifiedTopology: true,
     useNewUrlParser: true

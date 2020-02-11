@@ -12,13 +12,16 @@ var     express         =   require('express'),  //get express module from node-
         indexRoutes             =   require('./routes/index'),    
         methodOverride          = require('method-override');
 
-const   uri = 'mongodb://localhost/YelpCampDB'; //uri to connect with which DB of mongoDB on localhost
-
+// const   uri = 'mongodb://localhost/YelpCampDB'; //uri to connect with which DB of mongoDB on localhost
+const   uri = 'mongodb+srv://techycs:messi1018@ltscampdb-ifqwi.mongodb.net/test?retryWrites=true&w=majority'
 mongoose.connect(uri, {
     useUnifiedTopology: true,
     useNewUrlParser: true
-});  
-
+}).then(()=>{
+    console.log("Connected to DB")
+}).catch(err=>{
+    console.log("Error: " + error);
+}); 
 mongoose.set('useFindAndModify', false);
 
 var CampgroundMongoDB   =   require('./models/campModel'), // Gets the Campgrounds Model Schema 

@@ -46,7 +46,7 @@ p.subtext,h4.subtitle{
     font-family: 'Ubuntu', sans-serif;
 }
 .headContent{
-    font-family: 'Merienda', cursive
+    font-family: 'Marcellus SC', serif;
 }
 .overLock{
     font-family: 'Overlock', cursive;
@@ -57,6 +57,14 @@ p.subtext,h4.subtitle{
 .jumbotron h1.head{
     font-family: 'Satisfy', cursive;
     font-size: 4.5em;
+}
+
+.btn-block{
+    width: auto;
+}
+
+nav.goBack a {
+    color: #337ab7;
 }
 
 .alert{

@@ -105,12 +105,7 @@ function seedDB() {
     //     }
     //     data.forEach( eachCamp =>{
     //         CampgroundModel.create(eachCamp,(err,campSavedToDb)=>{
-    //             if(err){
-    //                 console.log("Error: " + err);
-    //             }else{
-    //                 console.log("Data saved to DB ");         
-    //                 commentsModel.create({
-    //                     textMongo:  campSavedToDb.nameMongo + " is a good place to have a good time with family and friends. If you want to make a camping plan for some weekend you can definitely visit and have fun. It is worth visting and spending time with nature",
+    //             if(err/login  textMongo:  campSavedToDb.nameMongo + " is a good place to have a good time with family and friends. If you want to make a camping plan for some weekend you can definitely visit and have fun. It is worth visting and spending time with nature",
     //                     authorMongo: {
     //                         id : "5e427167f81392159fb60b06",
 	//                         username : "Richard Bale"

@@ -4,7 +4,8 @@
   "description": "A camping ground website which lets people to see the camp-ground and even create one",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "2020 -Chaitanya Sonavane",
   "license": "ISC",

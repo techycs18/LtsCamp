@@ -88,42 +88,42 @@ var data = [
 ];
 
 function seedDB() {
-    // CampgroundModel.deleteMany({},err=>{
-    //     if(err){
-    //         console.log("Error: " +err);
-    //     }else{
-    //         console.log("Removed Campgrounds");
-    //         commentsModel.deleteMany({},err =>{
-    //             if(err){
-    //                 console.log("Some error");
-    //             }else{
-    //                 console.log("Removed Comments");
-    //             }
-    //         });
-    //     }
-    //     data.forEach( eachCamp =>{
-    //         CampgroundModel.create(eachCamp,(err,campSavedToDb)=>{
-    //             if(err){
-    //                 console.log(err)
-    //             }else{
-    //                 commentsModel.create({textMongo:  campSavedToDb.nameMongo + " is a good place to have a good time with family and friends. If you want to make a camping plan for some weekend you can definitely visit and have fun. It is worth visting and spending time with nature",
-    //                     authorMongo: {
-    //                         id : "5e427167f81392159fb60b06",
-	//                         username : "Richard Bale"
-    //                     }       
-    //                 },(err,commentAdded)=>{
-    //                     if(err){
-    //                         console.log(err);
-    //                     }else{
-    //                         console.log("Comments added: ");
-    //                         campSavedToDb.commentsMongo.push(commentAdded);
-    //                         campSavedToDb.save();
-    //                     }
-    //                 });
-    //             }
-    //         });
-    //     });
-    // });    
+    CampgroundModel.deleteMany({},err=>{
+        if(err){
+            console.log("Error: " +err);
+        }else{
+            console.log("Removed Campgrounds");
+            commentsModel.deleteMany({},err =>{
+                if(err){
+                    console.log("Some error");
+                }else{
+                    console.log("Removed Comments");
+                }
+            });
+        }
+        data.forEach( eachCamp =>{
+            CampgroundModel.create(eachCamp,(err,campSavedToDb)=>{
+                if(err){
+                    console.log(err)
+                }else{
+                    commentsModel.create({textMongo:  campSavedToDb.nameMongo + " is a good place to have a good time with family and friends. If you want to make a camping plan for some weekend you can definitely visit and have fun. It is worth visting and spending time with nature",
+                        authorMongo: {
+                            id : "5e427167f81392159fb60b06",
+	                        username : "Richard Bale"
+                        }       
+                    },(err,commentAdded)=>{
+                        if(err){
+                            console.log(err);
+                        }else{
+                            console.log("Comments added: ");
+                            campSavedToDb.commentsMongo.push(commentAdded);
+                            campSavedToDb.save();
+                        }
+                    });
+                }
+            });
+        });
+    });    
     console.log("seedDB was called");
 }
 

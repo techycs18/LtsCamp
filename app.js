@@ -13,7 +13,7 @@ var     express         =   require('express'),  //get express module from node-
         methodOverride          = require('method-override');
 
 // const   uri = process.env.DATABASEURL;
-const   uri = process.env.MONGOLABCAMP;  //they are set in local enviroment using exxport MONGO_LAB = SOME_URL and then used here
+const   uri = process.env.DATABASE_URI;  //they are set in local enviroment using exxport MONGO_LAB = SOME_URL and then used here
 mongoose.connect(uri, {
     useUnifiedTopology: true,
     useNewUrlParser: true

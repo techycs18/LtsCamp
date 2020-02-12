@@ -12,7 +12,7 @@ var     express         =   require('express'),  //get express module from node-
         indexRoutes             =   require('./routes/index'),    
         methodOverride          = require('method-override');
 
-// const   uri = process.env.DATABASEURL;
+// const   uri = 'mongodb://localhost/YelpCampDB';
 const   uri = process.env.DATABASE_URI;  //they are set in local enviroment using exxport MONGO_LAB = SOME_URL and then used here
 mongoose.connect(uri, {
     useUnifiedTopology: true,
@@ -20,7 +20,7 @@ mongoose.connect(uri, {
 }).then(()=>{
     console.log("Connected to DB: " + uri)
 }).catch(err=>{
-    console.log("Error: " + error);
+    console.log("Error: " + error +  "\t"+uri);
 }); 
 mongoose.set('useFindAndModify', false);
 

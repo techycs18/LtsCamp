@@ -1,5 +1,5 @@
 # LtsCamp
-- This is Social Website which helps to Surf thorugh some.
+- This is Social Website which helps to Surf thorugh some famous Camping ground.
 - Here is the link to the website: https://secret-waters-63714.herokuapp.com/
 - Techonologies used are Embedded JavaScript(EJS), Node.js, HTML, CSS, Bootstarp and Semantic UI 
 - The Website includes features such as signing up account, adding camping grounds, adding comments, editing and deleting images/comments.
